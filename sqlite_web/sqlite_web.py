@@ -1296,6 +1296,7 @@ def get_app():
         template_folder=os.path.join(CUR_DIR, "templates"),
     )
     app.config.from_object(__name__)
+    app.url_map.converters['b64'] = Base64Converter
     return app
 
 
